@@ -1,32 +1,32 @@
-const mongoose=require("mongoose");
+const mongoose = require('mongoose');
 
-const Schema=mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const userSchema=new Schema({
+const userSchema = new Schema({
     fullname: {
         type: String,
-        required:true,
-        trim:true
+        required: true,
+        trim: true
     },
-    occupation:{
+    occupation: {
         type: String,
-        required:true,
-        trim:true
+        required: true,
+        trim: true
     },
-    email:{
+    email: {
         type: String,
-        required:true,
-        trim:true
+        required: true,
+        trim: true
     },
-    phonenumber:{
+    phonenumber: {
         type: String,
-        required:true,
-        trim:true
+        required: true,
+        trim: true
     }
-},
-{
-    timestamps:true 
-})
+}, {
+    timestamps: true
+});
 
-const user=mongoose.model('user',userSchema)
-module.exports=user;
+const User = mongoose.model('user', userSchema);
+
+module.exports = User;
